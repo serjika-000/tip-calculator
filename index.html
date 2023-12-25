@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Tip calculator app</title>
+</head>
+<body>
+  <img src="images/logo.svg" alt="logo" class="logo-img">
+  <main class="container">
+    <div class="row">
+
+    <form class="tip-form" id="form" novalidate>
+      <div class="tip-input">
+          <label for="bill" class="label-title bill">Bill</label>
+          <input type="number" id="bill" class="bill-input" placeholder="0" name="bill">
+          <div class="tip-btns">
+          <label for="tip" class="label-title select">Select Tip %</label>
+            <div class="col">
+              <button type="button" class="tip-buttons five" value="5%">5%</button>
+              <button type="button"  class="tip-buttons ten" value="10%">10%</button>
+              <button type="button"  class="tip-buttons fifteen" value="15%">15%</button>
+            </div>
+            <div class="col">
+              <button type="button" class="tip-buttons twenty-five" value="25%">25%</button>
+              <button type="button" class="tip-buttons fifty" value="50%">50%</button>
+              <input type="number" id="tip" class="custom-input" value="custom" placeholder="Custom">
+            </div>
+          </div>
+          <label for="quantity" class="label-title num"> Number of People</label>
+          <small class="error-message">Can't be zero</small>
+          <input type="number" class="numOfPeople-input" name="numberOfPeople" id="quantity" placeholder="0">
+          
+      </div>
+
+      <div class="perPerson-input">
+          <div class="col amount-col">
+            <label class="amount-label" for="amount">Tip Amount</label><br>
+            <label class="sub-label" for="total">/ person</label>
+          </div>
+          <div class="col input-col">
+            <p id="amount" class="amount-input">$0.00</p>
+          </div>
+          <div class="col total-col">
+            <label class="total-label" for="total">Total</label><br>
+            <label class="sub-label" for="total"> / person</label>
+          </div>
+          <div class="col input-col">
+            <p id="total" class="total-input">$0.00</p>
+          </div>
+          <label for="reset-btn"></label>
+          <button type="button" class="reset-button" value="Reset">Reset</button>
+      </div>
+    </form>
+
+    </div>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
